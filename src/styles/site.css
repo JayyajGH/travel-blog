@@ -38,6 +38,7 @@ p {
 
 ul {
   @apply list-disc;
+  @apply mb-4;
 }
 
 ol {
