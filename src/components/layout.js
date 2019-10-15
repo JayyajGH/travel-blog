@@ -1,52 +1,24 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { rhythm, scale } from "../utils/typography"
-
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     let header
 
-    const headerContainer = {
-        display: 'flex',
-        justifyContent: 'space-between'
-    };
-
-    const navStyles = {
-      display: 'flex'
-    };
-
-    const menuStyles = {
-      display: 'flex',
-      listStyle: 'none'
-    };
-
-    const liStyles = {
-    };
-
-    const logoStyles = {
-      boxShadow: 'none'
-    };
-
-    const anchorStyles = {
-      padding: '10px',
-      boxShadow: 'none'
-    };
-
     header = (
-      <div style={headerContainer}>
-        <Link to="/" style={logoStyles}>Logo</Link>
-        <nav style={navStyles}>
-          <ul style={menuStyles}>
-            <li style={liStyles}>
-              <Link to="/" style={anchorStyles}>Home</Link>
+      <div className="flex justify-between">
+        <Link to="/">Logo</Link>
+        <nav className="flex">
+          <ul className="flex">
+            <li>
+              <Link to="/" className="p-3">Home</Link>
             </li>
             <li>
-              <Link to="/blog" style={anchorStyles}>Blog</Link>
+              <Link to="/blog" className="p-3">Blog</Link>
             </li>
             <li>
-              <Link to="/about" style={anchorStyles}>About</Link>
+              <Link to="/about" className="p-3">About</Link>
             </li>
           </ul>
         </nav>
@@ -55,14 +27,9 @@ class Layout extends React.Component {
 
     return (
       <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
+        className="container mx-auto max-w-2xl px-5 py-10"
       >
-        <header>{header}</header>
+        <header className="mb-8">{header}</header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

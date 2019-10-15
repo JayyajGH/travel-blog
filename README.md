@@ -90,4 +90,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 
 # My Bit
-Created using a gatsby starter.  Slightly tweaked
+Created using a gatsby starter but using Tailwind for styling
