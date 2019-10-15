@@ -23,6 +23,13 @@ class BlogPostTemplate extends React.Component {
             <p className="text-sm">{post.frontmatter.date}</p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
+
+          <ul className="list-none">
+            {post.frontmatter.tags.map(function(name,index){
+              return <li className="inline bg-gray-200 p-1 mr-1 rounded text-sm" key={ index }><a>{name}</a></li>;
+            })}
+          </ul>
+
           <hr className="mb-6" />
           <footer>
             <Bio />
@@ -69,7 +76,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        description,
+        tags
       }
     }
   }
