@@ -6,51 +6,53 @@ import { rhythm, scale } from "../utils/typography"
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
     let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    const headerContainer = {
+        display: 'flex',
+        justifyContent: 'space-between'
+    };
+
+    const navStyles = {
+      display: 'flex'
+    };
+
+    const menuStyles = {
+      display: 'flex',
+      listStyle: 'none'
+    };
+
+    const liStyles = {
+    };
+
+    const logoStyles = {
+      boxShadow: 'none'
+    };
+
+    const anchorStyles = {
+      padding: '10px',
+      boxShadow: 'none'
+    };
+
+    header = (
+      <div style={headerContainer}>
+        <Link to="/" style={logoStyles}>Logo</Link>
+        <nav style={navStyles}>
+          <ul style={menuStyles}>
+            <li style={liStyles}>
+              <Link to="/" style={anchorStyles}>Home</Link>
+            </li>
+            <li>
+              <Link to="/blog" style={anchorStyles}>Blog</Link>
+            </li>
+            <li>
+              <Link to="/about" style={anchorStyles}>About</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    )
+
     return (
       <div
         style={{
