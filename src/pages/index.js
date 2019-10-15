@@ -20,11 +20,8 @@ class BlogIndex extends React.Component {
           return (
             <article key={node.fields.slug}>
               <header>
-                <h3 className="mb-2"
-                >
-                  <Link to={node.fields.slug}>
-                    {title}
-                  </Link>
+                <h3 className="mb-2">
+                  <Link to={node.fields.slug}>{title}</Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
               </header>
@@ -52,7 +49,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      limit: 3
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt

@@ -12,13 +12,19 @@ class Layout extends React.Component {
         <nav className="flex">
           <ul className="flex list-none">
             <li>
-              <Link to="/" className="p-3">Home</Link>
+              <Link to="/" className="p-3">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/blog" className="p-3">Blog</Link>
+              <Link to="/blog" className="p-3">
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="/about" className="p-3">About</Link>
+              <Link to="/about" className="p-3">
+                About
+              </Link>
             </li>
           </ul>
         </nav>
@@ -26,9 +32,7 @@ class Layout extends React.Component {
     )
 
     return (
-      <div
-        className="container mx-auto max-w-2xl px-5 py-10"
-      >
+      <div className="container mx-auto max-w-2xl px-5 py-10">
         <header className="mb-8">{header}</header>
         <main>{children}</main>
         <footer>

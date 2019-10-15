@@ -19,26 +19,18 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1 className="mt-3"
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p className="text-sm"
-            >
-              {post.frontmatter.date}
-            </p>
+            <h1 className="mt-3">{post.frontmatter.title}</h1>
+            <p className="text-sm">{post.frontmatter.date}</p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr className="mb-6"
-          />
+          <hr className="mb-6" />
           <footer>
             <Bio />
           </footer>
         </article>
 
         <nav>
-          <ul className="flex flex-wrap justify-between list-none"
-          >
+          <ul className="flex flex-wrap justify-between list-none">
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
