@@ -10,7 +10,7 @@ class Layout extends React.Component {
       <div className="flex justify-between">
         <Link to="/">Logo</Link>
         <nav className="flex">
-          <ul className="flex">
+          <ul className="flex list-none">
             <li>
               <Link to="/" className="p-3">Home</Link>
             </li>
