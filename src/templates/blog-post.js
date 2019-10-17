@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import kebabCase from "lodash/kebabCase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
 
           <ul className="list-none">
             {post.frontmatter.tags.map(function(name,index){
-              return <li className="inline bg-gray-200 p-1 mr-1 rounded text-sm" key={ index }><a>{name}</a></li>;
+              return <li className="inline bg-gray-200 p-1 mr-1 rounded text-sm" key={ index }><Link to={`/tags/${kebabCase(name)}`}>{name}</Link></li>;
             })}
           </ul>
 
