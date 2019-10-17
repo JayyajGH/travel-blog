@@ -26,7 +26,9 @@ class BlogPostTemplate extends React.Component {
 
           <ul className="list-none">
             {post.frontmatter.tags.map(function(name,index){
-              return <li className="inline bg-gray-200 p-1 mr-1 rounded text-sm" key={ index }><Link to={`/tags/${kebabCase(name)}`}>{name}</Link></li>;
+              return <li className="inline bg-gray-200 px-2 py-1 mr-1 rounded-lg text-sm" key={ index }>
+                  <Link to={`/tags/${kebabCase(name)}`}>{name}</Link>
+                </li>;
             })}
           </ul>
 

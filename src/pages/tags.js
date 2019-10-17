@@ -21,9 +21,9 @@ const TagsPage = ({
     <SEO title="Post Tags" />
     <div>
       <h1>Tags</h1>
-      <ul>
+      <ul className="list-none">
         {group.map(tag => (
-          <li key={tag.fieldValue}>
+          <li key={tag.fieldValue} className="inline bg-gray-200 px-2 py-1 mr-1 rounded-lg text-sm">
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
