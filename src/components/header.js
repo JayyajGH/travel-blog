@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const Header = () => {
   return (
     <div className="pt-5 mb-8 flex flex-col items-center md:items-baseline md:flex-row justify-between">
-      <Link to="/">
+      <Link to="/" className="flex flex-col items-center md:items-start">
         <h1 className="mt-1 text-red-800">Travel Blog</h1>
         <p className="text-gray-700">View the world</p>
       </Link>
