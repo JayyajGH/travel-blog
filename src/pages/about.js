@@ -13,6 +13,7 @@ class AboutPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About page" />
         <h1>About Page</h1>
+        <p>This page explains what it is all about</p>
       </Layout>
     )
   }
