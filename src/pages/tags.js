@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
 
 // Components
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 
@@ -16,7 +17,7 @@ const TagsPage = ({
     },
   },
 }) => (
-  <div>
+  <Layout>
     <SEO title="Post Tags" />
     <div>
       <h1>Tags</h1>
@@ -30,7 +31,7 @@ const TagsPage = ({
         ))}
       </ul>
     </div>
-  </div>
+  </Layout>
 )
 
 TagsPage.propTypes = {
