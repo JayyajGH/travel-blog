@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Test Blog Thing`,
-    author: `Jason Harris`,
+    author: `Charlie Mackenzie`,
     description: `A travel blog of travels.`,
     siteUrl: `https://travel-blog.com/`,
     social: {
-      twitter: `kylemathews`,
+      instagram: `charliemackenzie1981`
     },
   },
   plugins: [
